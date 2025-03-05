@@ -64,6 +64,11 @@ var products = [
     }
 ]
 
+products = products.map(products => ({
+    ...products,
+    quantity : 0 
+}));
+
 // => Reminder, it's extremely important that you debug your code. 
 // ** It will save you a lot of time and frustration!
 // ** You'll understand the code better than with console.log(), and you'll also find errors faster. 
@@ -71,18 +76,27 @@ var products = [
 
 // Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
 var cart = [];
-
+var count = 0
 var total = 0;
 
 // Exercise 1
 function buy(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cart array
+    
+    const findProduct = products.find(products => products.id === id);
+   
+    findProduct.quantity === 0 ? cart.push(findProduct) : console.log("Ya esta en el carrito");
+    document.getElementById("count_product").textContent = ++count;
+    findProduct.quantity++
+    
+    console.log(cart);    
 }
 
 // Exercise 2
 function cleanCart() {
-
+    products.map(products => products.quantity = 0);
+    cart = []; 
+    document.getElementById("count_product").textContent = 0;
+    count = 0;
 }
 
 // Exercise 3
