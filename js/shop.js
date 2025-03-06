@@ -5,6 +5,7 @@ console.log(products);
 var cart = [];
 var count = 0
 var total = 0;
+document.getElementById("total_price").innerHTML = 0; 
 
 // Exercise 1
 function buy(id) {
@@ -18,7 +19,6 @@ function buy(id) {
     }else{
         productsInCart.quantity++;
     } 
-
     document.getElementById("count_product").textContent = ++count;
 
 }
@@ -26,7 +26,7 @@ function buy(id) {
 // Exercise 2
 function cleanCart() {
 
-    cart.forEach(productInCArt => productInCArt.quantity = 0);
+    cart.forEach(element => element.quantity = 0);
     cart = []; 
     count =  total = 0; 
 
@@ -37,7 +37,10 @@ function cleanCart() {
 
 // Exercise 3
 function calculateTotal() {
-    // Calculate total price of the cart using the "cartList" array
+    cart.forEach(productos => {
+        total = total + (productos.price * productos.quantity);
+    })
+    document.getElementById("total_price").innerHTML = total;
 }
 
 // Exercise 4
@@ -47,7 +50,17 @@ function applyPromotionsCart() {
 
 // Exercise 5
 function printCart() {
-    // Fill the shopping cart modal manipulating the shopping cart dom
+    let cartHTML = "";
+    cart.forEach(productos => {
+        cartHTML += `<tr>
+                        <th scope="row">${productos.name}</th>
+                        <td>${productos.price.toFixed(2)} €</td>
+                        <td>${productos.quantity}</td>
+                        <td>${(productos.price * productos.quantity).toFixed(2)} €</td>
+                    </tr>`;
+    })
+    document.getElementById("cart_list").innerHTML = cartHTML;
+    calculateTotal();
 }
 
 
@@ -62,6 +75,10 @@ function open_modal() {
     printCart();
 }
 
+
+
 window.buy = buy;
 window.cleanCart = cleanCart;
 window.open_modal = open_modal;
+
+
