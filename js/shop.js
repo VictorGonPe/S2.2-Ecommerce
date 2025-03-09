@@ -1,10 +1,9 @@
 import {products} from "./products.js";
 
-console.log(products);
-
 var cart = [];
 var count = 0
 var total = 0;
+
 document.getElementById("total_price").innerHTML = 0; 
 
 // Exercise 1
@@ -46,6 +45,18 @@ function calculateTotal() {
 // Exercise 4
 function applyPromotionsCart() {
     // Apply promotions to each item in the array "cart"
+    cart.forEach(element => {
+        if(element.quantity >= 3 && element.name === 'cooking oil') {
+            let discount = element.price - (element.price * 0.20);
+            let finalPrice = discount * element.quantity;
+            console.log(finalPrice.toFixed(2));
+            document.getElementById("finalPrice").textContent += ` (${finalPrice.toFixed(2)} €)` 
+        }else if(element.quantity >= 10 && element.name === 'Instant cupcake mixture') {
+            element.price = element.price - (element.price * 0.30);
+            
+        }
+
+    })
 }
 
 // Exercise 5
@@ -56,11 +67,12 @@ function printCart() {
                         <th scope="row">${productos.name}</th>
                         <td>${productos.price.toFixed(2)} €</td>
                         <td>${productos.quantity}</td>
-                        <td>${(productos.price * productos.quantity).toFixed(2)} €</td>
+                        <td id="finalPrice">${(productos.price * productos.quantity).toFixed(2)} €</td>
                     </tr>`;
     })
     document.getElementById("cart_list").innerHTML = cartHTML;
     calculateTotal();
+    applyPromotionsCart();
 }
 
 
