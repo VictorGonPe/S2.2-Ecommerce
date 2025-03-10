@@ -39,6 +39,8 @@ function cleanCart() {
 
 // Exercise 3
 function calculateTotal() {
+    total = 0;
+
     cart.forEach(productos => {
         if(productos.hasOwnProperty("offer") && productos.quantity >= productos.offer.number){    
             applyPromotionsCart(productos);   
@@ -53,28 +55,27 @@ function calculateTotal() {
 function applyPromotionsCart(item) {
     // Apply promotions to each item in the array "cart"
     let discount = item.price * (item.offer.percent/100);
-    subtotalWithDiscount = (item.price - discount) * item.quantity ;
+    item.subtotalWithDiscount = (item.price - discount) * item.quantity ;
         
-    total = total + subtotalWithDiscount;
+    total = total + item.subtotalWithDiscount;
     
     //document.querySelector(".prueba").textContent += ` (${subtotalWithDiscount.toFixed(2)} €)`
 }
 
 // Exercise 5
 function printCart() {
+    calculateTotal();  
     let cartHTML = "";
     cart.forEach(productos => {
-
         cartHTML += `<tr>
                         <th scope="row">${productos.name}</th>
                         <td>${productos.price.toFixed(2)} €</td>
                         <td>${productos.quantity}</td>
-                        <td>${(productos.price * productos.quantity).toFixed(2)} ${subtotalWithDiscount != undefined? `${subtotalWithDiscount}` : "" } €</td>
+                        <td>${(productos.price * productos.quantity).toFixed(2)} ${productos.subtotalWithDiscount !== undefined? `(${productos.subtotalWithDiscount.toFixed(2)})` : "" } €</td>
                     </tr>`;
     })
     document.getElementById("cart_list").innerHTML = cartHTML;
-
-    calculateTotal();  
+    
 }
 
 
