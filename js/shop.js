@@ -53,6 +53,7 @@ function calculateTotal() {
         if (productos.hasOwnProperty("offer") && productos.quantity >= productos.offer.number) {
             applyPromotionsCart(productos);
         } else {
+            delete productos.subtotalWithDiscount;
             total = total + (productos.price * productos.quantity);
         }
     })
@@ -61,13 +62,17 @@ function calculateTotal() {
 
 // Exercise 4
 function applyPromotionsCart(item) {
-    // Apply promotions to each item in the array "cart"
-    let discount = item.price * (item.offer.percent / 100);
-    item.subtotalWithDiscount = (item.price - discount) * item.quantity;
 
-    total = total + item.subtotalWithDiscount;
+    if (item.quantity >= item.offer.number) {
+        let discount = item.price * (item.offer.percent / 100);
+        item.subtotalWithDiscount = (item.price - discount) * item.quantity;
 
-    //document.querySelector(".prueba").textContent += ` (${subtotalWithDiscount.toFixed(2)} €)`
+        total = total + item.subtotalWithDiscount;
+
+    } else {
+        delete item.subtotalWithDiscount;
+    }
+
 }
 
 // Exercise 5
@@ -97,14 +102,13 @@ function removeFromCart(id) {
     const productIndex = cart.findIndex(products => products.id === id);
 
     if (cart[productIndex].quantity > 1) {
-        cart[productIndex].quantity--; // Reducir la cantidad
+        cart[productIndex].quantity--;
     } else {
-        cart.splice(productIndex, 1); // Eliminar el producto si queda en 0
+        cart.splice(productIndex, 1);
     }
 
-    count--; // Reducir el contador total de productos
+    count--;
     document.getElementById("count_product").textContent = count;
-
 
     printCart();
 }
@@ -112,7 +116,6 @@ function removeFromCart(id) {
 function open_modal() {
     printCart();
 }
-
 
 function exitCart() {
     total = 0;
