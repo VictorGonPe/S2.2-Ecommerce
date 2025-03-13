@@ -3,9 +3,17 @@ import { products } from "./products.js";
 var cart = [];
 var count = 0
 var total = 0;
-var subtotalWithDiscount;
+//var subtotalWithDiscount;
 
 document.getElementById("total_price").innerHTML = 0;
+
+document.getElementById("cart_list").addEventListener("click", function (event) {
+    if (event.target.classList.contains("remove-btn")) {
+        let productId = event.target.getAttribute("data-id");
+        removeFromCart(parseInt(productId));
+    }
+});
+
 
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", exitCart);
@@ -70,7 +78,9 @@ function printCart() {
         cartHTML += `<tr>
                         <th scope="row">${productos.name}</th>
                         <td>${productos.price.toFixed(2)} €</td>
-                        <td>${productos.quantity}</td>
+                        <td>${productos.quantity} 
+                            <button class="btn btn-danger btn-sm remove-btn" data-id="${productos.id}"><span></span>-</button>
+                        </td>
                         <td>${(productos.price * productos.quantity).toFixed(2)} ${productos.subtotalWithDiscount !== undefined ? `(${productos.subtotalWithDiscount.toFixed(2)})` : ""} €</td>
                     </tr>`;
     })
@@ -84,8 +94,19 @@ function printCart() {
 // Exercise 7
 function removeFromCart(id) {
 
-    
+    const productIndex = cart.findIndex(products => products.id === id);
 
+    if (cart[productIndex].quantity > 1) {
+        cart[productIndex].quantity--; // Reducir la cantidad
+    } else {
+        cart.splice(productIndex, 1); // Eliminar el producto si queda en 0
+    }
+
+    count--; // Reducir el contador total de productos
+    document.getElementById("count_product").textContent = count;
+
+
+    printCart();
 }
 
 function open_modal() {
