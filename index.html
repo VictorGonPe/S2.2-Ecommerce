@@ -16,13 +16,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
+	<div class="container bg-top-info m-0 pt-1 ">
+		<div class="text-center text-white d-flex justify-content-between px-5">
+			<p class="fw-bolder mt-1 mb-1">SPECIAL OFFER</p>
+			<p class="lead fw-normal text-white-50 mb-0">Get up to 50% off Today Only!</p>
+		</div>
+	</div>
 	<!-- Navigation-->
-	<nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg" id="navbar-example2">
+	<nav class="navbar py-3 py-lg-0 navbar-light bg-top-bar navbar-expand-lg" id="navbar-example2">
 		<div class="container d-flex">
-			<a class="navbar-brand" href="javascript:void(0)">ShopNow</a>
+			<a class="navbar-brand" href="javascript:void(0)">NaturFresh</a>
 			<div class="d-flex flex-row order-lg-last align-items-center">
 
 				<button type="button" class="navbar-toggler order-last collapsed" data-bs-toggle="collapse"
@@ -60,7 +67,7 @@
 	</nav>
 
 	<!-- Header-->
-	<header class="bg-dark py-5">
+	<header class="bg-my-menu py-5">
 		<div class="container px-4 px-lg-5 my-5">
 			<div class="text-center text-white">
 				<h1 class="display-4 fw-bolder">IT Academy Shop</h1>
@@ -71,12 +78,12 @@
 	<!-- Section-->
 	<section class="pt-5" id="grocery">
 		<h2 class="text-center"><i class="fas fa-shopping-basket pe-3"></i>Grocery</h2>
-		<div class="container px-4 px-lg-5 mt-5">
+		<div class="container mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top py-2 px-2" src="./images/photo1.jpg" alt="Pouring oil into the dish" />
+						<div class="card-body p-2">
 							<div class="text-center">
 								<h5 class="fw-bolder">Cooking Oil</h5>
 								$10.5
@@ -90,8 +97,8 @@
 				</div>
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top py-2 px-2" src="./images/photo2.jpg" alt="A fork with pasta" />
+						<div class="card-body p-2">
 							<div class="text-center">
 								<h5 class="fw-bolder">Pasta</h5>
 								$6.25
@@ -105,8 +112,8 @@
 				</div>
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top py-2 px-2" src="./images/photo3.jpg" alt="A board with cupcake ingredients" />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">Instant cupcake mixture</h5>
 								$5
@@ -124,12 +131,12 @@
 	</section>
 	<section class="pt-5" id="beauty">
 		<h2 class="text-center"><i class="fas fa-heart pe-3"></i>Beauty</h2>
-		<div class="container px-4 px-lg-5 mt-5">
+		<div class="container  mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top pt-2 px-2" src="./images/photo1.jpg" alt="..." />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">All-in-1</h5>
 								$260
@@ -143,8 +150,8 @@
 				</div>
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top pt-2 px-2" src="./images/photo1.jpg" alt="..." />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">Zero makeup kit</h5>
 								$20.5
@@ -158,8 +165,8 @@
 				</div>
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top pt-2 px-2" src="./images/product.svg" alt="..." />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">Lip tints</h5>
 								$12.75
@@ -177,12 +184,12 @@
 	</section>
 	<section class="pt-5" id="clothes">
 		<h2 class="text-center"><i class="fas fa-tshirt pe-3"></i>Clothes</h2>
-		<div class="container px-4 px-lg-5 mt-5">
+		<div class="container mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top pt-2 px-2" src="./images/product.svg" alt="..." />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">Lawn dress</h5>
 								$15
@@ -196,8 +203,8 @@
 				</div>
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top pt-2 px-2" src="./images/product.svg" alt="..." />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">Lawn-chiffon combo</h5>
 								$19.99
@@ -211,8 +218,8 @@
 				</div>
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
-						<div class="card-body p-4">
+						<img class="card-img-top pt-2 px-2" src="./images/product.svg" alt="..." />
+						<div class="card-body p-2 ">
 							<div class="text-center">
 								<h5 class="fw-bolder">Toddler Frock</h5>
 								$9.99

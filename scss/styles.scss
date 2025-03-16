@@ -1,0 +1,20 @@
+:root {
+    --bs-my-menu: #15c50b;
+    --bs-top-bar: #d9ddd9;
+    --bs-top-info: #56b119;
+  }
+  
+  .bg-my-menu {
+    background-color: var(--bs-my-menu);
+    height: 400px;
+  }
+  .bg-top-bar {
+    background-color: var(--bs-top-bar);
+  }
+  .bg-top-info {
+    background-color: var(--bs-top-info);
+    max-width: 100%;
+  }
+
+
+
