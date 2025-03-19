@@ -8,9 +8,10 @@
   margin-bottom: auto !important;
 }
 
-.buttonCart {
-  background-color: #56b119;
-  border: 1px solid #56b119;
+.buttonCart:hover {
+  background-color: #d9ddd9 !important;
+  border: none;
+  font-size: large;
 }
 
 .btn-resta {
@@ -49,7 +50,7 @@
 }
 
 .button-checkout {
-  border: none;
+  border-color: #15c50b;
 }
 
 :root {
@@ -71,6 +72,15 @@
 .card-img-top {
   height: 340px;
   border-radius: 12px;
+}
+
+.card {
+  border-color: var(--bs-green);
+}
+
+.card:hover {
+  transition: all 0.8s ease-in-out;
+  filter: saturate(2);
 }
 
 .bg-my-menu {
@@ -106,10 +116,6 @@
 
 .card .btn {
   width: 100%;
-}
-
-.card {
-  border-color: var(--bs-green);
 }
 
 #newsletter1 {

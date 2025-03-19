@@ -20,6 +20,14 @@
     height: 340px;
     border-radius: 12px;
   }
+  .card {
+    border-color: var(--bs-green);
+  }
+  
+  .card:hover {
+    transition: all 0.8s ease-in-out;
+    filter: saturate(2);
+  }
 
   .bg-my-menu {
     background-color: var(--bs-light-green);
@@ -55,10 +63,6 @@
 
   .card .btn {
     width: 100%;
-  }
-
-  .card {
-    border-color: var(--bs-green);
   }
 
   #newsletter1 {

@@ -8,9 +8,10 @@
   margin-bottom: auto !important;
 }
 
-.buttonCart {
-  background-color: #56b119;
-  border: 1px solid #56b119;
+.buttonCart:hover {
+  background-color: #d9ddd9 !important;
+  border: none;
+  font-size: large;
 }
 
 .btn-resta {
