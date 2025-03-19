@@ -2,4 +2,4 @@ node_modules/
 .sass-cache/
 dist/
 .env
-.DS_Store
+.DS_Storecss/styles.css.map
