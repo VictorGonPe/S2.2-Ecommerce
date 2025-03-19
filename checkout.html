@@ -21,7 +21,7 @@
 
 <body>
 	<!-- Navigation-->
-	<div class="fixed-top position-sticky shadow">
+	<div class="fixed-top position-sticky custom-shadow">
 		<div class="container bg-top-info m-0 pt-1 ">
 			<div class="text-center specialOffer text-white d-flex justify-content-between px-5">
 				<p class="fw-bolder mt-1 mb-1">SPECIAL OFFER</p>
@@ -31,6 +31,7 @@
 		<!-- Navigation-->
 		<nav class="navbar py-3 py-lg-0 navbar-light bg-top-bar navbar-expand-lg" id="navbar-example2">
 			<div class="container d-flex">
+				<img src="src/assets/img/logo.png" alt="logo NaturFresh" width="80" height="80">
 				<a class="navbar-brand" href="http://127.0.0.1:5500">NaturFresh</a>
 				<div class="d-flex flex-row order-lg-last align-items-center">
 	
@@ -135,7 +136,7 @@
 					</div>
 				</div>
 				<div class="col-12 mt-4 final">
-					<button type="submit" id="btn" class="p-2 px-4 btn btn-primary shadow-lg" onclick="validate()">
+					<button type="submit" id="btn" class="p-2 button-checkout bg-my-menu px-4 btn btn-primary shadow-lg" onclick="validate()">
 						<i class="fas fa-cart-arrow-down p-2"></i>Save
 					</button>
 				</div>
@@ -147,9 +148,12 @@
 
 	<!-- Footer-->
 	<footer class="py-3 bg-dark mt-5 pt-0">
-		<div class="bg-top-bar pt-5 px-5">
-		<div class="row justify-content-center">
-			<div class="col-6 col-md-2 mb-3">
+		<div class="bg-top-bar pt-4">
+		<div class="row col-12 justify-content-center align-items-center ps-3">
+			<div class="col-md-2">
+				<img src="src/assets/img/logo.png" alt="logo NaturFresh" width="80" height="80">
+			</div>
+			<div class="col-md-3 mb-3">
 			  <h5 class="mb-4">NaturFresh</h5>
 			  <ul class="nav flex-column">
 				<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Grocery</a></li>
@@ -160,10 +164,10 @@
 			  </ul>
 			</div>
 	  
-			<div class="col-md-5 offset-md-1 mb-3">
-			  <form>
-				<h5 class="text-muted">Subscribe to our newsletter</h5>
-				<p>Monthly digest of what's new and exciting from us.</p>
+			<div class="col-md-3 offset-md-1 mb-3 mt-2">
+			  <form class="b-5">
+				<h5>Subscribe to our newsletter</h5>
+				<p class="text-muted"">Monthly digest of what's new and exciting from us.</p>
 				<div class="d-flex flex-column flex-sm-row w-100 gap-2">
 				  <label for="newsletter1" class="visually-hidden">Email address</label>
 				  <input id="newsletter1" type="text" class="form-control me-5" placeholder="Email address">
@@ -171,13 +175,13 @@
 				<div><button class="btn btn-primary mt-3 px-5 bg-my-menu border-0" type="button">Subscribe</button></div>
 			  </form>
 			</div>
-		  </div>
+		</div>
 	  
-		  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 social">
-			<ul class="list-unstyled d-flex">
-			  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#icon-twitter"></use></svg></a></li>
-			  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-			  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+		  <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center  my-4 social">
+			<ul class="list-unstyled d-flex my-2">
+			  <li class="icon-social"><a class="link-dark" href="https:\\www.x.com"><img src="src/assets/img/icons-twitter.svg" alt="Twitter" width="30" height="30"></a></li>
+			  <li class="ms-3 icon-social"><a class="link-dark" href="https://www.instagram.com/"><img src="src/assets/img/icons-instagram.svg" alt="Instagram" width="30" height="30"></a></li>
+			  <li class="ms-3 icon-social"><a class="link-dark" href="https://www.facebook.com/"><img src="src/assets/img/icons-facebook.svg" alt="Facebook" width="30" height="30"></svg></a></li>
 			</ul>
 		  </div>
 		</div>
