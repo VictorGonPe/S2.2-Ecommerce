@@ -63,11 +63,16 @@
 }
 
 .social {
-  border-top: 1px solid var(--bs-green);
+  border-top: 1px solid grey;
 }
 
 .shadow {
   filter: drop-shadow(0px 4px 10px rgba(0, 255, 0, 0.5)); /* Sombra verde */
+}
+
+.icon-social img:hover {
+  display: block;
+  filter: invert(0.5);
 }
 
 @media (max-width: 800px) {
