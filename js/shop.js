@@ -8,12 +8,14 @@ var total = 0;
 document.getElementById("total_price").innerHTML = 0;
 
 document.getElementById("cart_list").addEventListener("click", function (event) {
-    if (event.target.classList.contains("remove-btn")) {
-        let productId = event.target.getAttribute("data-id");
+    let productId = event.target.getAttribute("data-id");
+
+    if (event.target.classList.contains("remove-btn")) {  
         removeFromCart(parseInt(productId));
+    }else {
+        addToCart(parseInt(productId));
     }
 });
-
 
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", exitCart);
@@ -84,7 +86,8 @@ function printCart() {
                         <th scope="row">${productos.name}</th>
                         <td>${productos.price.toFixed(2)} €</td>
                         <td>${productos.quantity} 
-                            <button class="btn btn-danger btn-sm remove-btn" data-id="${productos.id}"><span></span>-</button>
+                            <button class="btn py-0 btn-sm add-btn" data-id="${productos.id}"><span></span>+</button>
+                            <button class="btn btn-danger btn-resta py-0 btn-sm remove-btn" data-id="${productos.id}"><span></span>-</button>
                         </td>
                         <td>${(productos.price * productos.quantity).toFixed(2)} ${productos.subtotalWithDiscount !== undefined ? `(${productos.subtotalWithDiscount.toFixed(2)})` : ""} €</td>
                     </tr>`;
@@ -111,6 +114,16 @@ function removeFromCart(id) {
     document.getElementById("count_product").textContent = count;
 
     printCart();
+}
+
+function addToCart(id) {
+    const item = cart.find(item => item.id === id);
+    if (item) {
+        item.quantity++;
+        count++;
+        document.getElementById("count_product").textContent = count;
+        printCart();
+    }
 }
 
 function open_modal() {

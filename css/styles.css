@@ -1,3 +1,57 @@
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  max-width: 600px;
+  margin: auto !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.buttonCart {
+  background-color: #56b119;
+  border: 1px solid #56b119;
+}
+
+.btn-resta {
+  height: 60%;
+}
+
+.add-btn {
+  background-color: #56b119;
+  color: rgb(43, 42, 42);
+}
+
+@media (max-width: 600px) {
+  .modal-content th, td {
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 450px) {
+  .modal-content th, td {
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 400px) {
+  .modal-content td:nth-child(3) {
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    font-size: 0.5rem;
+  }
+}
+.fa-dollar-sign, .fa-arrows-alt-h, .fa-thumbs-up, .fa-stopwatch {
+  color: #56b119;
+}
+
+.formCheckout input {
+  box-shadow: none !important;
+}
+
 :root {
   --bs-light-green: #15c50b;
   --bs-top-bar: #d9ddd9;
