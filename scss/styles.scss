@@ -31,7 +31,6 @@
 
   .bg-my-menu {
     background-color: var(--bs-light-green);
-    //height: 100%;
   }
 
   .bg-orange {
@@ -55,9 +54,13 @@
     width: 100%;
   }
 
-  .btn:hover {
+  .subscribe-button {
+    border-color: var(--bs-light-green);
+  }
+
+  .btn:hover, .buttonCart:hover, .subscribe-button:hover {
     background-color: white;
-    border-color: var(--bs-green) ;
+    border-color: var(--bs-green);
     color: var(--bs-green) !important ;
   }
 
@@ -74,11 +77,10 @@
   }
 
   .custom-shadow {
-    filter: drop-shadow(0px 4px 10px rgba(0, 255, 0, 0.5)); /* Sombra verde */
+    filter: drop-shadow(0px 4px 10px rgba(0, 255, 0, 0.5)); 
   }
 
   .icon-social img:hover {
-    display: block;
     filter: invert(0.5);
   }
 
