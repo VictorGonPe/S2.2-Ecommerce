@@ -83,7 +83,7 @@
 }
 
 .card:hover {
-  transition: all 0.8s ease-in-out;
+  transition: all 0.4s ease-in-out;
   filter: saturate(2);
 }
 
