@@ -1,27 +1,27 @@
 # Ecommerce
 
-![Previsualización](src/assets/img/previsualizacion.png "Previsualización de la tienda")
+![Preview](src/assets/img/previsualizacion.png "Store Preview")
 
-## Descripción del sprint
+## Sprint Description
 
-Desarrollo de un **eCommerce** utilizando **Bootstrap 5**, **SASS** y **JavaScript**. Implementación de las principales funcionalidades (añadir productos al carro, aplicar las promociones y realizar cálculos del carrito, entre otras).
+Development of an **eCommerce** using **Bootstrap 5**, **SASS**, and **JavaScript**. Implementation of the main functionalities (adding products to the cart, applying promotions, and performing cart calculations, among others).
 
-## Tecnologías y herramientas utilizadas
+## Technologies and Tools Used
 
-- **HTML, SASS, Bootstrap 5 y JavaScript**
-- **IT Academy - Documentación del temario 2.2**
-- **[Bootstrap 5](https://getbootstrap.com/)** - Framework CSS
-- **[FontAwesome](https://fontawesome.com/)** - Iconos personalizables
+- **HTML, SASS, Bootstrap 5, and JavaScript**
+- **IT Academy - Course 2.2 Documentation**
+- **[Bootstrap 5](https://getbootstrap.com/)** - CSS Framework
+- **[Pixabay](https://pixabay.com/es/)** - Images without copyright
 
-## Requisitos
+## Requirements
 
-- **Navegador moderno**: Chrome, Firefox, Safari, Edge.
-- **Editor de código**: VS Code, Sublime Text (para editar o visualizar el código).
-- **Conocimientos básicos de HTML, SASS, Bootstrap y JavaScript.**
+- **Modern browser**: Chrome, Firefox, Safari, Edge.
+- **Code editor**: VS Code, Sublime Text (to edit or view the code).
+- **Basic knowledge of HTML, SASS, Bootstrap, and JavaScript.**
 
-## Instalación
+## Installation
 
-1. Clonar el repositorio:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/VictorGonPe/S2.2-Ecommerce.git
@@ -31,19 +31,19 @@ Desarrollo de un **eCommerce** utilizando **Bootstrap 5**, **SASS** y **JavaScri
     cd S2.2-Ecommerce
     ```
 
-2. Si el proyecto usa npm para gestionar dependencias, instalar paquetes:
+2. If the project uses npm for dependency management, install packages:
 
     ```bash
     npm install
     ```
 
-3. Abrir el proyecto en el editor de código.
+3. Open the project in a code editor.
 
-## Ejecución
+## Execution
 
-### **Opción 1**: Abrir directamente en el navegador  
-- Accede a la carpeta del proyecto y abre **index.html**.
+### **Option 1**: Open directly in the browser  
+- Navigate to the project folder and open **index.html**.
 
-### **Opción 2**: Usar Live Server en VS Code  
-- Haz clic derecho en **index.html** y selecciona **"Open with Live Server"**.
+### **Option 2**: Use Live Server in VS Code  
+- Right-click on **index.html** and select **"Open with Live Server"**.
 
