@@ -1,26 +1,28 @@
 import { products } from "./products.js";
 
-var cart = [];
-var count = 0
-var total = 0;
-//var subtotalWithDiscount;
+let cart = [];
+let count = 0
+let total = 0;
+
 
 document.getElementById("total_price").innerHTML = 0;
 
 document.getElementById("cart_list").addEventListener("click", function (event) {
     let productId = event.target.getAttribute("data-id");
 
-    if (event.target.classList.contains("remove-btn")) {  
+    if (event.target.classList.contains("remove-btn")) {
         removeFromCart(parseInt(productId));
-    }else {
+    } else {
         addToCart(parseInt(productId));
     }
+    event.target.classList.contains("remove-btn") ? removeFromCart(parseInt(productId)) :  addToCart(parseInt(productId))
+
 });
 
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", exitCart);
 
-// Exercise 1
+
 function buy(id) {
 
     const productFoundInArray = products.find(items => items.id === id);
@@ -36,7 +38,6 @@ function buy(id) {
 
 }
 
-// Exercise 2
 function cleanCart() {
 
     cart = [];
@@ -47,7 +48,6 @@ function cleanCart() {
     document.getElementById("total_price").innerHTML = 0;
 }
 
-// Exercise 3
 function calculateTotal() {
     total = 0;
 
@@ -62,7 +62,6 @@ function calculateTotal() {
     document.getElementById("total_price").innerHTML = total.toFixed(2);
 }
 
-// Exercise 4
 function applyPromotionsCart(item) {
 
     if (item.quantity >= item.offer.number) {
@@ -77,7 +76,6 @@ function applyPromotionsCart(item) {
 
 }
 
-// Exercise 5
 function printCart() {
     calculateTotal();
     let cartHTML = "";
@@ -96,10 +94,6 @@ function printCart() {
 
 }
 
-
-// ** Nivell II **
-
-// Exercise 7
 function removeFromCart(id) {
 
     const productIndex = cart.findIndex(products => products.id === id);

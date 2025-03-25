@@ -1,15 +1,13 @@
-
-// Exercise 6
 document.addEventListener("DOMContentLoaded", function () {
 
-	var fName = document.getElementById("fName");
-	var fEmail = document.getElementById("fEmail");
-	var fAddress = document.getElementById("fAddress");
-	var fLastN = document.getElementById("fLastN");
-	var fPassword = document.getElementById("fPassword");
-	var fPhone = document.getElementById("fPhone");
+	const fName = document.getElementById("fName");
+	const fEmail = document.getElementById("fEmail");
+	const fAddress = document.getElementById("fAddress");
+	const fLastN = document.getElementById("fLastN");
+	const fPassword = document.getElementById("fPassword");
+	const fPhone = document.getElementById("fPhone");
 
-	// Regular esxpressions
+
 	let nameTemplate = /^[A-Za-zÀ-ÿ\s]{3,}$/;
 	let phoneTemplate = /^[0-9]{9}$/;
 	let emailTemplate = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	document.querySelectorAll("input").forEach(inputItem => {
 		inputItem.addEventListener("input", function () {
-			this.classList.remove("is-invalid"); // Si el usuario corrige, se quita la clase de error
+			this.classList.remove("is-invalid");
 		});
 	});
 });
